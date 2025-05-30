@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/AQLT/formation.template/index.html</loc>
-    <lastmod>2023-11-25T13:15:59.483Z</lastmod>
+    <loc>https://aqlt.github.io/formation.2025.ast/quiz.html</loc>
+    <lastmod>2024-11-04T06:05:53.645Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/AQLT/formation.template/TP/JD_1_Premiere_manipulation_JD.html</loc>
-    <lastmod>2023-11-25T13:15:58.884Z</lastmod>
+    <loc>https://aqlt.github.io/formation.2025.ast/backcasttransform.html</loc>
+    <lastmod>2024-11-04T06:05:53.641Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aqlt.github.io/formation.2025.ast/TP/4_Lissage_Exponentiel.html</loc>
+    <lastmod>2024-11-04T06:05:53.579Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aqlt.github.io/formation.2025.ast/TP/2_Graphiques.html</loc>
+    <lastmod>2024-11-04T06:05:53.576Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aqlt.github.io/formation.2025.ast/TP/1_Manipulation_series_temporelles.html</loc>
+    <lastmod>2024-11-04T06:05:53.574Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aqlt.github.io/formation.2025.ast/TP/3_Decomposition.html</loc>
+    <lastmod>2025-05-27T19:40:25.003Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aqlt.github.io/formation.2025.ast/TP/5_ARIMA.html</loc>
+    <lastmod>2024-11-04T06:05:53.580Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aqlt.github.io/formation.2025.ast/index.html</loc>
+    <lastmod>2025-05-27T20:34:49.655Z</lastmod>
   </url>
 </urlset>
