@@ -45,6 +45,13 @@ autocorrélogrammes, saisonnalité, analyse spectrale
 
 À approfondir : modèles de régression et de prévision, désaisonnalisation et correction des jours ouvrables, analyse de données à haute fréquence, modèles espace-état, DFM, combinaison de prévisions...
 
+### Pour en savoir plus
+
+Sur les prévisions : 
+
+Quartier-la-Tente A. (2024), *Utilisation de modèles de régression à coefficients variant dans le temps pour la prévision conjoncturelle*, Document de travail Insee, G2024/16. <https://github.com/InseeFrLab/DT-tvcoef>.
+
+Petropoulos F. and al (2021), *Forecasting: theory and practice*. <https://arxiv.org/abs/2012.03854>.
 
 ### Bibliographie
 
