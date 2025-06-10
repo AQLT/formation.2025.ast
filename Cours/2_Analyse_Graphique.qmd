@@ -135,6 +135,8 @@ Permet d'étudier le schéma saisonnier et les écarts importants par rapport à
 
 {{< fa brands r-project >}} : `forecast::seasonplot()`, `forecast::ggseasonplot()` ou `feasts::gg_season()` pour la version tsibble.
 
+{{< fa arrow-circle-right >}} Exemple avec `nottem` : température mensuelle moyenne au Château de Nottingham entre 1920 et 1939
+
 ### Exemple
 
 ```{r,fig.height=6}
@@ -280,7 +282,7 @@ $$
 
 Rmq : dans le cas réel, $I(\omega_j) = I(-\omega_j)$
 
-Rmq : généralement $x$ est normalisé (en enlevant également la tendance)
+Rmq : généralement $x$ est normalisé (en enlevant également la tendance) et log-transformée
 
 Donne les mêmes informations que les autocorrélogrammes :
 
@@ -288,7 +290,13 @@ $$
 I(\omega_j)=\sum_{|k|<n}\hat\gamma(k)e^{-ik\omega_j}
 $$
 
-### Exemple
+### Exemple (1/2)
+
+```{r,fig.height=5}
+spec.pgram(nottem, log = "no")
+```
+
+### Exemple (2/2)
 
 ```{r,fig.height=5}
 spec.pgram(nottem)
