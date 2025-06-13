@@ -15,7 +15,7 @@ library(dygraphs)
 
 > L'objectif de ce TP est d'introduire aux méthodes de décomposition.
 
-Dans ce TP nous utiliserons notamment les niveaux bruts des indices de production industrielle (IPI) publiés le 04 novembre 2022 par l'Insee, fichier de données téléchargeable ici : <https://www.insee.fr/fr/statistiques/8566967>.
+Dans ce TP nous utiliserons notamment les niveaux bruts des indices de production industrielle (IPI) publiés le 06 mai 2025 par l'Insee, fichier de données téléchargeable ici : <https://www.insee.fr/fr/statistiques/8566967>.
 
 Les packages suivants seront utilisés :
 
