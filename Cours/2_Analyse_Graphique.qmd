@@ -471,7 +471,7 @@ $$
 \left[1+\frac{\sigma^2_h(1-\lambda)}{2(\lambda x + 1)^{2\lambda}}\right]& \text{ si }\lambda\ne0
 \end{cases}
 $$
-Voir https://aqlt.github.io/formation/{{< var repo-github>}}/backcasttransform
+Voir https://aqlt.github.io/{{< var repo-github>}}/backcasttransform
 
 # Conclusion
 

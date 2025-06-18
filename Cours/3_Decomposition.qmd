@@ -215,6 +215,8 @@ TRAMO-SEATS : uniquement implémenté dans `RJDemetra`
 
 NB : voir <https://github.com/rjdverse> pour les packages associés à JDemetra+ 3.0
 
+Voir <https://aqlt.github.io/formation.2023.cvs/manuel_installation.html> pour installer une version portable de Java.
+
 ### Comparaison des performances (1)
 
 ```{r,echo=FALSE,message=FALSE,warning=FALSE}

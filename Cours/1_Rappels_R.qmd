@@ -203,6 +203,12 @@ as_tsibble(mts) %>%
 	index_by(date = ~ yearquarter(.)) %>% 
 	summarise(moy = mean(value))
 as_tsibble(mts) %>%  
+	# Ici on ne fait rien
+	group_by_key() %>% 
+	summarise(moy = mean(value))
+as_tsibble(mts) %>%  
+	index_by(date = ~ yearquarter(.)) %>% 
+	# Moy trim par clé
 	group_by_key() %>% 
 	summarise(moy = mean(value))
 ```

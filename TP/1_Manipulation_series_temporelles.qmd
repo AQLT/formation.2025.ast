@@ -332,6 +332,7 @@ Il permet notamment de faire des imputations de données manquantes selon diffé
 Le calcul de l'évolution trimestrielle aurait par exemple pu être faite avec ce package :
 
 ```{r}
+ipi_fr_manuf_prolonge <- window(ipi_fr_manuf, end = c(2019, 12), extend = TRUE)
 somme_trim <- aggregate(as.zoo(ipi_fr_manuf_prolonge), yearqtr, sum)
 somme_trim <- as.ts(somme_trim) #La conversion en ts est plus simple depuis un objet zoo
 evol_trim <- ev(somme_trim)

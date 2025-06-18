@@ -81,7 +81,7 @@ autoplot(gas, main = "Production mensuelle de gaz en Australie")
 which.max(gold)
 gold[which.max(gold)]
 dates = seq(from = ymd("1985-01-01"), to = ymd("1989-03-31"), by = "day")
-hors_wd = dates[lubridate::wday(dates,week_start = 1) %in% c(1:4,7)] # on ne prend pas les jours 6 et 7 (samedi et dimanche)
+hors_wd = dates[lubridate::wday(dates,week_start = 1) %in% c(1:4,7)] # on ne prend pas les jours 5 et 6 (vendredi et samedi)
 length(hors_wd) - length(gold) # on a bien le même nombre d'observations
 hors_wd[which.max(gold)]
 ```
