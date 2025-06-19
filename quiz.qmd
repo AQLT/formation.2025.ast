@@ -16,9 +16,9 @@ library(patchwork, quietly = FALSE, warn.conflicts = FALSE)
 ::: {#exr-def-st}
 Une série temporelle est un processus stochastique, dont on n'observe qu'une réalisation.
 
-**A. Vrai**
+**A. Vrai.**
 
-B. Faux
+B. Faux.
 :::
 
 ::: {#exr-err-dplyr-lag}
@@ -31,34 +31,34 @@ library(stats)
 lag(AirPassengers)
 ```
 
-**A. Une erreur car le chargement du package `dplyr` masque la fonction `stats::lag`**
+**A. Une erreur car le chargement du package `dplyr` masque la fonction `stats::lag`.**
 
-B. Ma série retardée car j'ai chargé le package `stats` après le package `dplyr`
+B. Ma série retardée car j'ai chargé le package `stats` après le package `dplyr`.
 :::
 
 ::: {#exr-lag-diff}
 Je souhaite calculer la série différenciée à l'ordre 12 et la série retardée de 1 mois de la série `AirPassengers`.
 Quelles fonctions faut-il utiliser ?
 
-A. `stats::diff(AirPassengers, 12)` et `stats::lag(AirPassengers, 1)`
+A. `stats::diff(AirPassengers, 12)` et `stats::lag(AirPassengers, 1)`.
 
-B. `stats::diff(AirPassengers, -12)` et `stats::lag(AirPassengers, 1)`
+B. `stats::diff(AirPassengers, -12)` et `stats::lag(AirPassengers, 1)`.
 
-**C. `stats::diff(AirPassengers, 12)` et `stats::lag(AirPassengers, -1)`**
+**C. `stats::diff(AirPassengers, 12)` et `stats::lag(AirPassengers, -1)`.**
 
-D. `stats::diff(AirPassengers, -12)` et `stats::lag(AirPassengers, -1)`
+D. `stats::diff(AirPassengers, -12)` et `stats::lag(AirPassengers, -1)`.
 :::
 
 ::: {#exr-tsibble}
-Quel package permet de manipuler des séries temporelles avec le language du `tidyverse` .
+Quel package permet de manipuler des séries temporelles avec le language du `tidyverse` ?
 
-A. `stats`
+A. `stats`.
 
-B. `xts`
+B. `xts`.
 
-C. `stats`
+C. `stats`.
 
-**D. `tsibble`**
+**D. `tsibble`.**
 :::
 
 ::: {#exr-autocor}
@@ -66,10 +66,10 @@ C. `stats`
 
 ```{r}
 #| message: false
-#| echo: false
-library(forecast, quietly = FALSE, warn.conflicts = FALSE)
-library(ggplot2, quietly = FALSE, warn.conflicts = FALSE)
-library(patchwork, quietly = FALSE, warn.conflicts = FALSE)
+#| echo: true
+library(forecast)
+library(ggplot2)
+library(patchwork)
 autoplot(UKgas) + ggplot2::labs(y = "Nombre",
 	title = "Consommation trimestrielle de gaz au Royaume-Uni")
 
@@ -82,13 +82,13 @@ acf_d = ggAcf(UKDriverDeaths, lag.max = 24)+ labs(title = "Image D", y = NULL, x
 	(acf_c + acf_d)
 ```
 
-A. Image A
+A. Image A.
 
-B. Image B
+B. Image B.
 
-**C. Image C**
+**C. Image C.**
 
-D. Image D
+D. Image D.
 :::
 
 
@@ -103,13 +103,13 @@ spectrum(s,
          method = "pgram", log = "no")
 ```
 
-A. Tendance
+A. Tendance.
 
-B. Cycle
+B. Cycle.
 
-**C. Saisonnalité**
+**C. Saisonnalité.**
 
-D. Irrégulier
+D. Irrégulier.
 :::
 
 ::: {#exr-perod-bb}
@@ -122,27 +122,27 @@ spectrum(i,
          method = "pgram", log = "no")
 ```
 
-A. Tendance
+A. Tendance.
 
-B. Cycle
+B. Cycle.
 
-C. Saisonnalité
+C. Saisonnalité.
 
-**D. Irrégulier**
+**D. Irrégulier.**
 :::
 
 ::: {#exr-bx}
 La transformation de Box-Cox est-elle adaptée à la série suivante ?
 ```{r}
-library(forecast, quietly = FALSE, warn.conflicts = FALSE)
+library(forecast)
 forecast::autoplot(expsmooth::cangas, ylab = NULL)
 ```
 
-A. Oui
+A. Oui.
 
-B. Oui mais seulement avant 1972
+B. Oui mais seulement avant 1972.
 
-**C. Non**
+**C. Non.**
 :::
 
 ::: {#exr-}
@@ -151,9 +151,9 @@ Est-ce que je peux directement utiliser la fonction `stl()` pour désaisonnalise
 forecast::autoplot(AirPassengers)
 ```
 
-**A. Non car le saisonnalité est multiplicative**
+**A. Non car le saisonnalité est multiplicative.**
 
-B. Oui car `stl()` détecte la type de saisonnalité
+B. Oui car `stl()` détecte la type de saisonnalité.
 :::
 
 ::: {#exr-cours-cac-40}
@@ -165,11 +165,11 @@ autoplot(y, y = "Niveau",
          main  = "Cours de clôture du CAC 40")
 ```
 
-A. Moyenne des valeurs passées
+A. Moyenne des valeurs passées.
 
-**B. Dernière date connue**
+**B. Dernière date connue.**
 
-C. Valeur de l'année passée
+C. Valeur de l'année passée.
 :::
 
 
@@ -194,13 +194,13 @@ autoplot(y, y = "Niveau",
          main  = "Cours de clôture du CAC 40")
 ```
 
-A. ARIMA(1,0,0)
+A. ARIMA(1,0,0).
 
-B. ARIMA(1,0,1)
+B. ARIMA(1,0,1).
 
-C. ARIMA(0,0,1)
+C. ARIMA(0,0,1).
 
-**D. ARIMA(0,1,0)**
+**D. ARIMA(0,1,0).**
 :::
 
 ::: {#exr-cours-tend-diff}
@@ -216,13 +216,13 @@ C. Saisonnière et régulière.
 ::: {#exr-series-journ}
 Sur des séries journalières, quelle méthode privilégier pour prendre en compte la saisonnalité ?
 
-A. En ajoutant des indicatrices
+A. Ajouter des indicatrices.
 
-B. En différenciant la série
+B. Différencier la série.
 
-**C. En ajoutant des régresseurs de Fourier**
+**C. Ajouter des régresseurs de Fourier.**
 
-D. Toutes ces méthodes
+D. Toutes ces méthodes.
 
 :::
 
@@ -230,7 +230,7 @@ D. Toutes ces méthodes
 ::: {#exr-qual-aic}
 Pour comparer la qualité prédictive d'un modèle exponentiel et d'un modèle ARIMA, je peux utiliser l'AIC.
 
-A. Vrai
+A. Vrai.
 
-**B. Faux**
+**B. Faux.**
 :::

@@ -138,7 +138,7 @@ A priori pas une marche aléatoire.
 tseries::kpss.test(y)
 tseries::adf.test(y)
 ```
-Les tests KPSS et ADF considèrent que la série est non-stationnaire.
+Les tests KPSS et ADF considèrent que la série est stationnaire.
 On remarque que l'ACF décroit rapidement vers O de manière sinusodiale  et que le PACF est nul à partir de l'ordre 3 : on estime un AR2.
 ```{r sunspot.year-resod}
 mod_ar2 <- Arima(y, order = c(2, 0, 0))
