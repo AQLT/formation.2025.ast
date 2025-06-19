@@ -5,6 +5,13 @@
 <!-- echo: false -->
 <!-- --- -->
 
+```{r}
+#| include: false
+library(forecast, quietly = FALSE, warn.conflicts = FALSE)
+library(ggplot2, quietly = FALSE, warn.conflicts = FALSE)
+library(patchwork, quietly = FALSE, warn.conflicts = FALSE)
+```
+
 
 ::: {#exr-def-st}
 Une série temporelle est un processus stochastique, dont on n'observe qu'une réalisation.

@@ -475,9 +475,27 @@ ggAcf(resid(snaive(ldeaths)), add.normal = TRUE) +
 	labs(title = "Résidus SNAIVE") 
 ```
 
-### ACF et tests Portemanteau (`Box.test()`)
+### J'ai un pic sur l'ACF ma série est donc autocorrélée ?
 
 L'ACF est un outils graphique simple pour vérifier ont les mêmes propriétés qu'un bruit blanc. 
+
+. . .
+
+\bcattention Attention à ne surtout pas analyser la significativités de tous les retards des ACF et de conclure à l'autocorrélation dans le cas d'une présence d'un seul pic ?
+
+. . .
+
+Rappel statistique : si l'on fait $n$ tests indépendants au seuil $\alpha$, la probabilité qu'au moins un test soit erroné est :
+$$
+1-(1-\alpha)^n
+$$
+Pour $n=12$ et $\alpha = 0,05$ on a $1-(1-\alpha)^n\simeq 46~\%.$
+
+. . .
+
+Préférer les tests d'autocorrélation (test Portemanteau)
+
+### ACF et tests Portemanteau (`Box.test()`)
 
 Il existe également des tests d'autocorrélation :
 

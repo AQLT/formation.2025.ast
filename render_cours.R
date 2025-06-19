@@ -6,6 +6,7 @@ enable_render()
 remove_handout("Cours/_metadata.yml")
 quarto::quarto_render('Cours/0_Accueil.qmd')
 file.copy('_site/Cours/0_Accueil.pdf', 'Cours/pres/0_Accueil.pdf', overwrite = TRUE)
+# file.copy('_site/Cours/0_Accueil.pdf', 'Cours/0_Accueil.pdf', overwrite = TRUE)
 quarto::quarto_render('Cours/1_Rappels_R.qmd')
 file.copy('_site/Cours/1_Rappels_R.pdf', 'Cours/pres/1_Rappels_R.pdf', overwrite = TRUE)
 quarto::quarto_render('Cours/2_Analyse_Graphique.qmd')
@@ -20,8 +21,7 @@ quarto::quarto_render('Cours/6_Complements.qmd')
 file.copy('_site/Cours/6_Complements.pdf', 'Cours/pres/6_Complements.pdf', overwrite = TRUE)
 
 add_handout("Cours/_metadata.yml")
-quarto::quarto_render('Cours/0_Accueil.qmd')
-file.copy('_site/Cours/0_Accueil.pdf', 'Cours/0_Accueil.pdf', overwrite = TRUE)
+# quarto::quarto_render('Cours/0_Accueil.qmd')
 quarto::quarto_render('Cours/1_Rappels_R.qmd')
 file.copy('_site/Cours/1_Rappels_R.pdf', 'Cours/1_Rappels_R.pdf', overwrite = TRUE)
 quarto::quarto_render('Cours/2_Analyse_Graphique.qmd')
@@ -38,3 +38,5 @@ file.copy('_site/Cours/6_Complements.pdf', 'Cours/6_Complements.pdf', overwrite 
 unlink("_site/Cours", recursive = TRUE)
 
 disable_render()
+
+quarto::quarto_publish_site()

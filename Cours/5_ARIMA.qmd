@@ -212,7 +212,7 @@ X_t=a+bt+\varepsilon_t
 $$
 2. Modèle avec racine unité
 $$
-(1-B)Y_t=b+\eta\implies Y_t=a+bt+\underbrace{\sum_{i=1}^t\eta_t}_{\text{tend. stochastique}}
+(1-B)Y_t=b+\eta_t\implies Y_t=a+bt+\underbrace{\sum_{i=1}^t\eta_t}_{\text{tend. stochastique}}
 $$
  
 On a $\mathbb V [X_t]=\mathbb V[\varepsilon_t]=cst$ indépendante du temps mais $\mathbb V [Y_t] = t\mathbb V[\eta_t]$
