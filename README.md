@@ -1,7 +1,7 @@
 
 # AST 2025
 
-Supports de cours et exercices de la formation [Analyse des séries temporelles avec {{< fa brands r-project >}} au CEPE](https://www.lecepe.fr/formations/methodes-statistiques/series-temporelles/analyse-des-series-temporelles-avec-r_44.html) les 18 et 29 juin 2025.
+Supports de cours et exercices de la formation [Analyse des séries temporelles avec R au CEPE](https://www.lecepe.fr/formations/methodes-statistiques/series-temporelles/analyse-des-series-temporelles-avec-r_44.html) les 18 et 29 juin 2025.
 
 
 # Licence
