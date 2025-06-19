@@ -211,8 +211,8 @@ window.Quarto = {
 <!-- --- -->
 <div id="exr-def-st" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 1</strong></span> Une série temporelle est un processus stochastique, dont on n’observe qu’une réalisation.</p>
-<p><strong>A. Vrai</strong></p>
-<p>B. Faux</p>
+<p><strong>A. Vrai.</strong></p>
+<p>B. Faux.</p>
 </div>
 <div id="exr-err-dplyr-lag" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 2</strong></span> Que va donner le code suivant :</p>
@@ -221,26 +221,31 @@ window.Quarto = {
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stats)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">lag</span>(AirPassengers)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>A. Une erreur car le chargement du package <code>dplyr</code> masque la fonction <code>stats::lag</code></strong></p>
-<p>B. Ma série retardée car j’ai chargé le package <code>stats</code> après le package <code>dplyr</code></p>
+<p><strong>A. Une erreur car le chargement du package <code>dplyr</code> masque la fonction <code>stats::lag</code>.</strong></p>
+<p>B. Ma série retardée car j’ai chargé le package <code>stats</code> après le package <code>dplyr</code>.</p>
 </div>
 <div id="exr-lag-diff" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 3</strong></span> Je souhaite calculer la série différenciée à l’ordre 12 et la série retardée de 1 mois de la série <code>AirPassengers</code>. Quelles fonctions faut-il utiliser ?</p>
-<p>A. <code>stats::diff(AirPassengers, 12)</code> et <code>stats::lag(AirPassengers, 1)</code></p>
-<p>B. <code>stats::diff(AirPassengers, -12)</code> et <code>stats::lag(AirPassengers, 1)</code></p>
-<p><strong>C. <code>stats::diff(AirPassengers, 12)</code> et <code>stats::lag(AirPassengers, -1)</code></strong></p>
-<p>D. <code>stats::diff(AirPassengers, -12)</code> et <code>stats::lag(AirPassengers, -1)</code></p>
+<p>A. <code>stats::diff(AirPassengers, 12)</code> et <code>stats::lag(AirPassengers, 1)</code>.</p>
+<p>B. <code>stats::diff(AirPassengers, -12)</code> et <code>stats::lag(AirPassengers, 1)</code>.</p>
+<p><strong>C. <code>stats::diff(AirPassengers, 12)</code> et <code>stats::lag(AirPassengers, -1)</code>.</strong></p>
+<p>D. <code>stats::diff(AirPassengers, -12)</code> et <code>stats::lag(AirPassengers, -1)</code>.</p>
 </div>
 <div id="exr-tsibble" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercice 4</strong></span> Quel package permet de manipuler des séries temporelles avec le language du <code>tidyverse</code> .</p>
-<p>A. <code>stats</code></p>
-<p>B. <code>xts</code></p>
-<p>C. <code>stats</code></p>
-<p><strong>D. <code>tsibble</code></strong></p>
+<p><span class="theorem-title"><strong>Exercice 4</strong></span> Quel package permet de manipuler des séries temporelles avec le language du <code>tidyverse</code> ?</p>
+<p>A. <code>stats</code>.</p>
+<p>B. <code>xts</code>.</p>
+<p>C. <code>stats</code>.</p>
+<p><strong>D. <code>tsibble</code>.</strong></p>
 </div>
 <div id="exr-autocor" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 5</strong></span> À quel autocorrélogramme est associé à la série suivante ?</p>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(forecast)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">autoplot</span>(UKgas) <span class="sc">+</span> ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Nombre"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Consommation trimestrielle de gaz au Royaume-Uni"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -248,6 +253,13 @@ window.Quarto = {
 </figure>
 </div>
 </div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>acf_a <span class="ot">=</span> <span class="fu">ggAcf</span>(AirPassengers, <span class="at">lag.max =</span> <span class="dv">24</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Image A"</span>, <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">x =</span> <span class="cn">NULL</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>acf_b <span class="ot">=</span> <span class="fu">ggAcf</span>(ldeaths, <span class="at">lag.max =</span> <span class="dv">24</span>)<span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Image B"</span>, <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">x =</span> <span class="cn">NULL</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>acf_c <span class="ot">=</span> <span class="fu">ggAcf</span>(UKgas, <span class="at">lag.max =</span> <span class="dv">24</span>)<span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Image C"</span>, <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">x =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">12</span>, <span class="dv">18</span>, <span class="dv">24</span>))</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>acf_d <span class="ot">=</span> <span class="fu">ggAcf</span>(UKDriverDeaths, <span class="at">lag.max =</span> <span class="dv">24</span>)<span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Image D"</span>, <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">x =</span> <span class="cn">NULL</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>(acf_a <span class="sc">+</span> acf_b) <span class="sc">/</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    (acf_c <span class="sc">+</span> acf_d)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -256,19 +268,19 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>A. Image A</p>
-<p>B. Image B</p>
-<p><strong>C. Image C</strong></p>
-<p>D. Image D</p>
+<p>A. Image A.</p>
+<p>B. Image B.</p>
+<p><strong>C. Image C.</strong></p>
+<p>D. Image D.</p>
 </div>
 <div id="exr-perod-bb" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 6</strong></span> À quelle composante est associé le périodogramme suivant :</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="fu">ts</span>(<span class="fu">cos</span>(<span class="dv">2</span><span class="sc">*</span>pi<span class="sc">/</span><span class="dv">12</span><span class="sc">*</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>)) <span class="sc">+</span> <span class="fu">sin</span>(<span class="dv">2</span><span class="sc">*</span>pi<span class="sc">/</span><span class="dv">12</span><span class="sc">*</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>)), <span class="at">frequency =</span> <span class="dv">12</span>, <span class="at">start =</span> <span class="dv">2000</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">spectrum</span>(s, </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">detrend =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">method =</span> <span class="st">"pgram"</span>, <span class="at">log =</span> <span class="st">"no"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="fu">ts</span>(<span class="fu">cos</span>(<span class="dv">2</span><span class="sc">*</span>pi<span class="sc">/</span><span class="dv">12</span><span class="sc">*</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>)) <span class="sc">+</span> <span class="fu">sin</span>(<span class="dv">2</span><span class="sc">*</span>pi<span class="sc">/</span><span class="dv">12</span><span class="sc">*</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>)), <span class="at">frequency =</span> <span class="dv">12</span>, <span class="at">start =</span> <span class="dv">2000</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">spectrum</span>(s, </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">detrend =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">method =</span> <span class="st">"pgram"</span>, <span class="at">log =</span> <span class="st">"no"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -277,19 +289,19 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>A. Tendance</p>
-<p>B. Cycle</p>
-<p><strong>C. Saisonnalité</strong></p>
-<p>D. Irrégulier</p>
+<p>A. Tendance.</p>
+<p>B. Cycle.</p>
+<p><strong>C. Saisonnalité.</strong></p>
+<p>D. Irrégulier.</p>
 </div>
 <div id="exr-perod-bb" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 7</strong></span> À quelle composante est associé le périodogramme suivant :</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>i <span class="ot">=</span> <span class="fu">ts</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>), <span class="at">frequency =</span> <span class="dv">12</span>, <span class="at">start =</span> <span class="dv">2000</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">spectrum</span>(i, </span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">detrend =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">method =</span> <span class="st">"pgram"</span>, <span class="at">log =</span> <span class="st">"no"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>i <span class="ot">=</span> <span class="fu">ts</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>), <span class="at">frequency =</span> <span class="dv">12</span>, <span class="at">start =</span> <span class="dv">2000</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">spectrum</span>(i, </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">detrend =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">method =</span> <span class="st">"pgram"</span>, <span class="at">log =</span> <span class="st">"no"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -298,16 +310,16 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>A. Tendance</p>
-<p>B. Cycle</p>
-<p>C. Saisonnalité</p>
-<p><strong>D. Irrégulier</strong></p>
+<p>A. Tendance.</p>
+<p>B. Cycle.</p>
+<p>C. Saisonnalité.</p>
+<p><strong>D. Irrégulier.</strong></p>
 </div>
 <div id="exr-bx" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 8</strong></span> La transformation de Box-Cox est-elle adaptée à la série suivante ?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(forecast, <span class="at">quietly =</span> <span class="cn">FALSE</span>, <span class="at">warn.conflicts =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>forecast<span class="sc">::</span><span class="fu">autoplot</span>(expsmooth<span class="sc">::</span>cangas, <span class="at">ylab =</span> <span class="cn">NULL</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(forecast)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>forecast<span class="sc">::</span><span class="fu">autoplot</span>(expsmooth<span class="sc">::</span>cangas, <span class="at">ylab =</span> <span class="cn">NULL</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -316,14 +328,14 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>A. Oui</p>
-<p>B. Oui mais seulement avant 1972</p>
-<p><strong>C. Non</strong></p>
+<p>A. Oui.</p>
+<p>B. Oui mais seulement avant 1972.</p>
+<p><strong>C. Non.</strong></p>
 </div>
 <div id="exr-" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 9</strong></span> Est-ce que je peux directement utiliser la fonction <code>stl()</code> pour désaisonnaliser cette série ?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>forecast<span class="sc">::</span><span class="fu">autoplot</span>(AirPassengers)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>forecast<span class="sc">::</span><span class="fu">autoplot</span>(AirPassengers)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -332,15 +344,15 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p><strong>A. Non car le saisonnalité est multiplicative</strong></p>
-<p>B. Oui car <code>stl()</code> détecte la type de saisonnalité</p>
+<p><strong>A. Non car le saisonnalité est multiplicative.</strong></p>
+<p>B. Oui car <code>stl()</code> détecte la type de saisonnalité.</p>
 </div>
 <div id="exr-cours-cac-40" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 10</strong></span> Quel modèle peut-on utiliser pour prévoir le cours de clôture du CAC 40 ?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">window</span>(EuStockMarkets[,<span class="st">"CAC"</span>], <span class="at">start =</span> <span class="dv">1998</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">autoplot</span>(y, <span class="at">y =</span> <span class="st">"Niveau"</span>,</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">main  =</span> <span class="st">"Cours de clôture du CAC 40"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">window</span>(EuStockMarkets[,<span class="st">"CAC"</span>], <span class="at">start =</span> <span class="dv">1998</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">autoplot</span>(y, <span class="at">y =</span> <span class="st">"Niveau"</span>,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">main  =</span> <span class="st">"Cours de clôture du CAC 40"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -349,14 +361,14 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>A. Moyenne des valeurs passées</p>
-<p><strong>B. Dernière date connue</strong></p>
-<p>C. Valeur de l’année passée</p>
+<p>A. Moyenne des valeurs passées.</p>
+<p><strong>B. Dernière date connue.</strong></p>
+<p>C. Valeur de l’année passée.</p>
 </div>
 <div id="exr-ets-co2" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 11</strong></span> Quel modèle est retenu pour cette série ?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>forecast<span class="sc">::</span><span class="fu">ets</span>(co2, <span class="at">damped =</span> <span class="cn">FALSE</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>forecast<span class="sc">::</span><span class="fu">ets</span>(co2, <span class="at">damped =</span> <span class="cn">FALSE</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>ETS(M,A,A) 
 
@@ -387,9 +399,9 @@ forecast::ets(y = co2, damped = FALSE)
 <div id="exr-cours-cac-40-arima" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 12</strong></span> Quel modèle ARIMA parait plausible pour modéliser le cours de clôture du CAC 40 ?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">window</span>(EuStockMarkets[,<span class="st">"CAC"</span>], <span class="at">start =</span> <span class="dv">1998</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">autoplot</span>(y, <span class="at">y =</span> <span class="st">"Niveau"</span>,</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">main  =</span> <span class="st">"Cours de clôture du CAC 40"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">window</span>(EuStockMarkets[,<span class="st">"CAC"</span>], <span class="at">start =</span> <span class="dv">1998</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">autoplot</span>(y, <span class="at">y =</span> <span class="st">"Niveau"</span>,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">main  =</span> <span class="st">"Cours de clôture du CAC 40"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -398,10 +410,10 @@ forecast::ets(y = co2, damped = FALSE)
 </div>
 </div>
 </div>
-<p>A. ARIMA(1,0,0)</p>
-<p>B. ARIMA(1,0,1)</p>
-<p>C. ARIMA(0,0,1)</p>
-<p><strong>D. ARIMA(0,1,0)</strong></p>
+<p>A. ARIMA(1,0,0).</p>
+<p>B. ARIMA(1,0,1).</p>
+<p>C. ARIMA(0,0,1).</p>
+<p><strong>D. ARIMA(0,1,0).</strong></p>
 </div>
 <div id="exr-cours-tend-diff" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 13</strong></span> Si une série comporte une tendance linéaire et une saisonnalité mensuelle, quelle différenciation faut-il faire ?</p>
@@ -411,15 +423,15 @@ forecast::ets(y = co2, damped = FALSE)
 </div>
 <div id="exr-series-journ" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 14</strong></span> Sur des séries journalières, quelle méthode privilégier pour prendre en compte la saisonnalité ?</p>
-<p>A. En ajoutant des indicatrices</p>
-<p>B. En différenciant la série</p>
-<p><strong>C. En ajoutant des régresseurs de Fourier</strong></p>
-<p>D. Toutes ces méthodes</p>
+<p>A. Ajouter des indicatrices.</p>
+<p>B. Différencier la série.</p>
+<p><strong>C. Ajouter des régresseurs de Fourier.</strong></p>
+<p>D. Toutes ces méthodes.</p>
 </div>
 <div id="exr-qual-aic" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercice 15</strong></span> Pour comparer la qualité prédictive d’un modèle exponentiel et d’un modèle ARIMA, je peux utiliser l’AIC.</p>
-<p>A. Vrai</p>
-<p><strong>B. Faux</strong></p>
+<p>A. Vrai.</p>
+<p><strong>B. Faux.</strong></p>
 </div>
 
 

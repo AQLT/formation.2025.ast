@@ -537,7 +537,7 @@ Dickey-Fuller = -3.8579, Lag order = 4, p-value = 0.01889
 alternative hypothesis: stationary</code></pre>
 </div>
 </div>
-<p>Les tests KPSS et ADF considèrent que la série est non-stationnaire. On remarque que l’ACF décroit rapidement vers O de manière sinusodiale et que le PACF est nul à partir de l’ordre 3 : on estime un AR2.</p>
+<p>Les tests KPSS et ADF considèrent que la série est stationnaire. On remarque que l’ACF décroit rapidement vers O de manière sinusodiale et que le PACF est nul à partir de l’ordre 3 : on estime un AR2.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>mod_ar2 <span class="ot">&lt;-</span> <span class="fu">Arima</span>(y, <span class="at">order =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">0</span>))</span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>mod_ar2</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
